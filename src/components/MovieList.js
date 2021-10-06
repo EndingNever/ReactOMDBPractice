@@ -1,0 +1,29 @@
+import React from 'react'
+import MovieCard from './MovieCard'
+
+function MovieList({ videos }) {
+
+
+
+    if (videos.length === 0) {
+        return (<div>No Movies</div>)
+    }
+
+    return (
+        <div>
+            <h1>Movie List</h1>
+            <div className="flex">
+            {videos.map((video) => (
+          <MovieCard
+            key={video.imdbID}
+            poster={video.Poster}
+            title={video.Title}
+            type={video.Type}
+          />
+        ))}
+            </div>
+        </div>
+    );
+}
+
+export default MovieList
