@@ -6,7 +6,6 @@
 const OMDB_API_KEY = "e54dfc28";
 const baseURL = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&`;
 
-
 const getMoviesBySearchTerm = async (searchTerm, type) => {
     let searchTermURL = `${baseURL}s=${searchTerm}`;
     if(type) {
