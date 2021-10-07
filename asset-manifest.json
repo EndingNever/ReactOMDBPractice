@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ReactOMDBPractice/static/css/main.1c9a5928.chunk.css",
-    "main.js": "/ReactOMDBPractice/static/js/main.c9484d15.chunk.js",
-    "main.js.map": "/ReactOMDBPractice/static/js/main.c9484d15.chunk.js.map",
+    "main.js": "/ReactOMDBPractice/static/js/main.6dcb2033.chunk.js",
+    "main.js.map": "/ReactOMDBPractice/static/js/main.6dcb2033.chunk.js.map",
     "runtime-main.js": "/ReactOMDBPractice/static/js/runtime-main.9b45ba63.js",
     "runtime-main.js.map": "/ReactOMDBPractice/static/js/runtime-main.9b45ba63.js.map",
     "static/js/2.732ef49a.chunk.js": "/ReactOMDBPractice/static/js/2.732ef49a.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9b45ba63.js",
     "static/js/2.732ef49a.chunk.js",
     "static/css/main.1c9a5928.chunk.css",
-    "static/js/main.c9484d15.chunk.js"
+    "static/js/main.6dcb2033.chunk.js"
   ]
 }
