@@ -4,7 +4,7 @@
 
 
 const OMDB_API_KEY = "e54dfc28";
-const baseURL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&`;
+const baseURL = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&`;
 
 
 const getMoviesBySearchTerm = async (searchTerm, type) => {
