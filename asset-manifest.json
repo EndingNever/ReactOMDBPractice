@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/ReactOMDBPractice/static/css/main.6f5358b7.chunk.css",
-    "main.js": "/ReactOMDBPractice/static/js/main.a32dfb4a.chunk.js",
-    "main.js.map": "/ReactOMDBPractice/static/js/main.a32dfb4a.chunk.js.map",
-    "runtime-main.js": "/ReactOMDBPractice/static/js/runtime-main.c332c42a.js",
-    "runtime-main.js.map": "/ReactOMDBPractice/static/js/runtime-main.c332c42a.js.map",
-    "static/js/2.6ec4b638.chunk.js": "/ReactOMDBPractice/static/js/2.6ec4b638.chunk.js",
-    "static/js/2.6ec4b638.chunk.js.map": "/ReactOMDBPractice/static/js/2.6ec4b638.chunk.js.map",
-    "static/js/3.7a12a2bd.chunk.js": "/ReactOMDBPractice/static/js/3.7a12a2bd.chunk.js",
-    "static/js/3.7a12a2bd.chunk.js.map": "/ReactOMDBPractice/static/js/3.7a12a2bd.chunk.js.map",
+    "main.css": "/ReactOMDBPractice/static/css/main.e82eb07d.chunk.css",
+    "main.js": "/ReactOMDBPractice/static/js/main.613aac84.chunk.js",
+    "main.js.map": "/ReactOMDBPractice/static/js/main.613aac84.chunk.js.map",
+    "runtime-main.js": "/ReactOMDBPractice/static/js/runtime-main.4ac2090e.js",
+    "runtime-main.js.map": "/ReactOMDBPractice/static/js/runtime-main.4ac2090e.js.map",
+    "static/js/2.4e2fa755.chunk.js": "/ReactOMDBPractice/static/js/2.4e2fa755.chunk.js",
+    "static/js/2.4e2fa755.chunk.js.map": "/ReactOMDBPractice/static/js/2.4e2fa755.chunk.js.map",
+    "static/js/3.2e250c34.chunk.js": "/ReactOMDBPractice/static/js/3.2e250c34.chunk.js",
+    "static/js/3.2e250c34.chunk.js.map": "/ReactOMDBPractice/static/js/3.2e250c34.chunk.js.map",
     "index.html": "/ReactOMDBPractice/index.html",
-    "static/css/main.6f5358b7.chunk.css.map": "/ReactOMDBPractice/static/css/main.6f5358b7.chunk.css.map",
-    "static/js/2.6ec4b638.chunk.js.LICENSE.txt": "/ReactOMDBPractice/static/js/2.6ec4b638.chunk.js.LICENSE.txt"
+    "static/css/main.e82eb07d.chunk.css.map": "/ReactOMDBPractice/static/css/main.e82eb07d.chunk.css.map",
+    "static/js/2.4e2fa755.chunk.js.LICENSE.txt": "/ReactOMDBPractice/static/js/2.4e2fa755.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c332c42a.js",
-    "static/js/2.6ec4b638.chunk.js",
-    "static/css/main.6f5358b7.chunk.css",
-    "static/js/main.a32dfb4a.chunk.js"
+    "static/js/runtime-main.4ac2090e.js",
+    "static/js/2.4e2fa755.chunk.js",
+    "static/css/main.e82eb07d.chunk.css",
+    "static/js/main.613aac84.chunk.js"
   ]
 }
