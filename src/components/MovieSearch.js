@@ -4,6 +4,8 @@ import styled, { css } from 'styled-components'
 
 import { useState } from 'react';
 import { getMoviesBySearchTerm } from "../utility"
+import { useContext } from 'react/cjs/react.development';
+import pageContext from '../contexts/PageContext';
 
 const Button = styled.button`
     background-color: green;
@@ -35,31 +37,27 @@ const Container = styled.div`
 
 function MovieSearch({ updateVideos, updateTotal }) {
 
-    const [movieText, setMovieText] = useState('')
-    const [movieType, setMovieType] = useState('')
+     const { currentPage, movieText, setMovieText, movieType, setMovieType } = useContext(pageContext)
 
-    // useEffect(() => {
-    //     getMoviesBySearchTerm(movieText, movieType)
+     const fetchMovies = ()=>{
+         getMoviesBySearchTerm(movieText, movieType, currentPage).then((data)=>{
+             const [videos, total] = data;
+             updateVideos(videos);
+             updateTotal(total);
+         }).finally()
+     }
+
+    //  const fetchMovies = () => {
+    //     getMoviesBySearchTerm(movieText, movieType, currentPage)
     //         .then((data) => {
-    //             updateVideos(data);
+    //             const [videos, total] = data;
+    //             updateVideos(videos);
+    //             updateTotal(total);
     //         })
     //         .finally(() => {
-    //             // setIsLoading(false);
+    //             // updatePage(currentPage)
     //         });
-    // }, [movieText, movieType]);
-
-    const fetchMovies = () => {
-        getMoviesBySearchTerm(movieText, movieType)
-            .then((data) => {
-                const [videos, total] = data;
-
-                updateVideos(videos)
-                updateTotal(total)
-            })
-            .finally(() => {
-                // setIsLoading(false);
-            });
-    }
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -69,48 +67,42 @@ function MovieSearch({ updateVideos, updateTotal }) {
 
 
     return (
-    <div className="movie__search-container">
-        <form
-            onSubmit={handleSubmit}
+        <div className="movie__search-container">
+            <form
+                onSubmit={handleSubmit}
             >
-            <input
-                type="text"
-                placeholder="Enter Movie..."
-                onChange={(e) => {
-                    setMovieText(e.target.value)
-                }}
-                value={movieText}
-                className="searchInput"
-            />
-            <select 
-                className="movie__search-select"
-                // style={{ 
-                //     border: "2px solid red", 
-                //     backgroundColor:"#ccc", 
-                //     fontSize: "40px",
-                //     margin: "0 10px",
-                //     borderRadius: "10px"
-                // }}
-                onChange={(e) => {
-                    setMovieType(e.target.value)
-                }}
-                value={movieType}
-            >
-                <option value="">Type</option>
-                <option value="movie">Movie</option>
-                <option value="series">Series</option>
-                {/* <option value="episode">Episode</option> */}
-            </select>
-            <button type="submit">Enter</button>
+                <input
+                    type="text"
+                    placeholder="Enter Movie..."
+                    onChange={(e) => {
+                        setMovieText(e.target.value)
+                    }}
+                    value={movieText}
+                    className="searchInput"
+                />
+                <select
+                    className="movie__search-select"
+                    onChange={(e) => {
+                        setMovieType(e.target.value)
+                    }}
+                    value={movieType}
+                >
+                    <option value="">All</option>
+                    <option value="movie">Movie</option>
+                    <option value="series">Series</option>
 
-            {/* <Container>
-                <Button>Hello world!</Button>
-                <Button primary>Hello world!</Button>
-                <Button secondary>Hello world!</Button>
-            </Container> */}
-        </form>
-    </div>
+                </select>
+                <button type="submit" className="button">Enter</button>
+            </form>
+        </div>
     )
 }
 
+
 export default MovieSearch
+
+
+
+export const testExport2 = ()=>{
+    console.log('testexport2');
+}

@@ -1,33 +1,36 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import { useContext } from 'react/cjs/react.development';
+import pageContext from '../contexts/PageContext';
 import "../styles/Paginator.css"
+import { getMoviesBySearchTerm } from '../utility';
 
 const calculateTotalPages = (itemCount) => {
     return Math.ceil(itemCount / 10)
 };
 
 function Paginator({ totalVideos }) {
-    const [page, setPage] = useState(1);
-    
+    const { currentPage, setCurrentPage } = useContext(pageContext)
+
     const totalPages = Math.ceil(totalVideos / 10)
     
     return (
         <div>
-            <p>Page {page} of {calculateTotalPages(totalVideos)}</p>
+            <p>Page {currentPage} of {calculateTotalPages(totalVideos)}</p>
             <div>
                 <button
-                disabled={page == 1}
+                disabled={currentPage == 1}
                     onClick={() => {
-                        if (page > 1) {
-                            setPage(page-1);
+                        if (currentPage > 1) {
+                            setCurrentPage(currentPage-1);
                         }
-                        console.log("clicked prev")
+                        
                     }}
                 >
                     &laquo;
                 </button>
                 <button
                     onClick={() => {
-                        setPage(page+1);
+                        setCurrentPage(currentPage+1);
                     }}
                 >
                     &raquo;</button>

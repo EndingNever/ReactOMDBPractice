@@ -6,19 +6,19 @@
 const OMDB_API_KEY = "e54dfc28";
 const baseURL = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&`;
 
-const getMoviesBySearchTerm = async (searchTerm, type) => {
-    let searchTermURL = `${baseURL}s=${searchTerm}`;
+const getMoviesBySearchTerm = async (searchTerm, type, page) => {
+    let searchTermURL = `${baseURL}s=${searchTerm}&page=${page}`;
     if(type) {
         searchTermURL += `&type=${type}`
     }
 
     const response = await fetch(searchTermURL)
     const data = await response.json();
+    console.log(searchTermURL) 
 
     if(data.Response === "True") {
         return [data.Search, data.totalResults];
     }
-    
     return [];
 };
 
