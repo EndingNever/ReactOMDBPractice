@@ -6,7 +6,7 @@ function MovieList({ videos }) {
 
 
     if (videos.length === 0) {
-        return (<div>No Movies</div>)
+        return (<div className="no_movies_alert">Movies Display Here!</div>)
     }
 
     return (
