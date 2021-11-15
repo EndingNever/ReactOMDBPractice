@@ -10,7 +10,7 @@ function useFetch(url) {
             .then((response) => response.json())
             .then((json) => setData(json))
             .finally(() => {
-                console.log(data);
+                // console.log(data);
                 setLoading(false)
             })
     }, []);

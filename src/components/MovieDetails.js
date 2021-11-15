@@ -2,7 +2,7 @@ import React from 'react'
 
 
 function MovieDetails( {movie} ) {
-    console.log(movie)
+    // console.log(movie)
     return (
     <article className="movie">
       <div className="movie__left-col">

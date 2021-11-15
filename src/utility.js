@@ -14,8 +14,6 @@ const getMoviesBySearchTerm = async (searchTerm, type, page) => {
 
     const response = await fetch(searchTermURL)
     const data = await response.json();
-    console.log(searchTermURL) 
-
     if(data.Response === "True") {
         return [data.Search, data.totalResults];
     }
