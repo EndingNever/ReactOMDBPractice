@@ -1,17 +1,10 @@
 import './App.css';
-import { useState, useEffect } from "react";
-
-import { useFetch, useAdd } from './hooks'
+import { useState } from "react";
 
 import MovieList from './components/MovieList';
 import MovieSearch from './components/MovieSearch';
-import Paginator from './components/Paginator'
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import { Routes, Switch } from "react-router"
 import pageContext from './contexts/PageContext';
-import { useContext } from 'react';
-import { getMoviesBySearchTerm } from './utility';
-import { fetchMovies } from './components/MovieSearch'
 
 function App() {
   const [videos, setVideos] = useState([]);
@@ -28,9 +21,6 @@ function App() {
 
   return (
     <Router>
-      <Routes>
-        <Route path="/Home" component={<App />} />
-      </Routes>
       <pageContext.Provider value={{ currentPage, setCurrentPage, movieText, setMovieText, movieType, setMovieType  }}>
         <div className="App">
           <h1 className="nav" > OMDB </h1>

@@ -100,9 +100,3 @@ function MovieSearch({ updateVideos, updateTotal }) {
 
 
 export default MovieSearch
-
-
-
-export const testExport2 = ()=>{
-    console.log('testexport2');
-}
